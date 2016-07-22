@@ -1,0 +1,8 @@
+<!DOCTYPE layout>
+<layout>
+ <edge dstX="-250.477" id="4" dstID="3" dstY="-313.665" srcID="0" srcX="-284" srcY="-244"/>
+ <edge dstX="-294.247" id="5" dstID="2" dstY="-242.024" srcID="1" srcX="-339.277" srcY="-331.311"/>
+ <node type="org.dunnart.shapes.rect" cy="-331.311" height="50" id="1" width="70" cx="-339.277"/>
+ <node type="org.dunnart.shapes.roundedRect" cy="-242.024" height="50" id="2" width="70" cx="-294.247"/>
+ <node type="org.dunnart.shapes.ellipse" cy="-313.665" height="50" id="3" width="70" cx="-250.477"/>
+</layout>

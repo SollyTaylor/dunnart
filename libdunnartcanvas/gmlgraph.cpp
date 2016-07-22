@@ -201,7 +201,8 @@ Graph::Graph(Canvas *canvas, string gmlFile, Page page, COff canvasOffset)
     forall_edges(e,G) {
         es.push_back(make_pair(e->source()->index(),e->target()->index()));
     }
-    shortest_paths::johnsons(n,shortestPathsMatrix,es);
+    std::valarray<int> eLengths;
+    shortest_paths::johnsons(n,shortestPathsMatrix,es, eLengths);
     canvas->setIdealConnectorLength(70);
 }
 Draw::Draw(ogdf::Graph& G, ogdf::GraphAttributes& GA, QPixmap *pixmap,

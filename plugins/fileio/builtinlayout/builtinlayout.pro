@@ -10,3 +10,8 @@ include(../fileio_plugin_options.pri)
 HEADERS       =
 SOURCES       = plugin.cpp
 
+win32: {
+CONFIG += windows
+LIBS += -L$$DESTDIR -ldunnartcanvas -ltopology -lcola -lvpsc -logdf -lavoid -lpsapi
+
+}

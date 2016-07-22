@@ -28,7 +28,8 @@
 #include <vector>
 #include <valarray>
 #include <algorithm>
-#include <cmath>
+//#include <cmath>
+#include "libcola/commondefs.h"
 #include <iostream>
 
 #include "libcola/gradient_projection.h"

@@ -1,6 +1,6 @@
 TEMPLATE = lib
 TARGET = cola
-CONFIG += shared
+CONFIG += staticlib
 DEPENDPATH += .. .
 INCLUDEPATH += .. \
     ../libvpsc
@@ -9,7 +9,8 @@ CONFIG -= qt
 
 #LIBS += -Wl,-undefined -Wl,dynamic_lookup
 
-LIBS += -L$$DESTDIR -lvpsc
+LIBS += -L$$DESTDIR -lvpsc -Tp
+DEFINES += NOMINMAX
 
 # Input
 SOURCES += cola.cpp \

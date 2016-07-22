@@ -28,9 +28,9 @@
 
 #if defined(_MSC_VER) && !defined(LIBAVOID_NO_DLL)
     #ifdef LIBAVOID_EXPORTS
-        #define AVOID_EXPORT __declspec(dllexport)
+        #define AVOID_EXPORT //__declspec(dllexport)
     #else
-        #define AVOID_EXPORT __declspec(dllimport)
+        #define AVOID_EXPORT //__declspec(dllimport)
     #endif
 #else
     #define AVOID_EXPORT

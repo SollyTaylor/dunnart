@@ -15,3 +15,8 @@ PKGCONFIG += libcgraph
 HEADERS       =
 SOURCES       = plugin.cpp
 
+win32: {
+CONFIG += windows
+LIBS += -L$$DESTDIR -ldunnartcanvas -ltopology -lcola -lvpsc -logdf -lavoid -lpsapi
+
+}

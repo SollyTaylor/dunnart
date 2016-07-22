@@ -2,7 +2,7 @@
 TEMPLATE = lib
 TARGET = vpsc
 
-CONFIG += shared
+CONFIG += staticlib
 
 DEPENDPATH += ..
 INCLUDEPATH += ..

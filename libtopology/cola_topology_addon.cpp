@@ -20,6 +20,8 @@
 
 #include <utility>
 
+#include <algorithm>
+
 #include "libvpsc/rectangle.h"
 #include "libvpsc/constraint.h"
 #include "libcola/compound_constraints.h"
@@ -120,6 +122,7 @@ void ColaTopologyAddon::computePathLengths(unsigned short** G)
 
 
 static const double LIMIT = 100000000;
+static const double M_PI = 3.141592653589793238462;
 
 static void reduceRange(double& val)
 {

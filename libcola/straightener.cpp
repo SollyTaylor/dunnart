@@ -29,7 +29,7 @@
 #include <list>
 #include <cassert>
 #include <iostream>
-#include <cmath>
+//#include <cmath>
 
 #include "libvpsc/assertions.h"
 #include "libcola/commondefs.h"

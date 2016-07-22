@@ -92,7 +92,7 @@ void floyd_warshall(unsigned const n, T** D, std::vector<Edge> const & es,
  */
 template <typename T>
 void johnsons(unsigned const n, T** D, std::vector<Edge> const & es,
-        std::valarray<T> const & eweights = std::valarray<T>());
+        std::valarray<T> const & eweights);
 /**
  * find shortest path lengths from node s to all other nodes
  * @param s starting node

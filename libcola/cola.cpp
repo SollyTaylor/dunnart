@@ -19,7 +19,7 @@
  * Author(s):  Tim Dwyer
 */
 
-#include <cmath>
+//#include <cmath>
 
 #include "libvpsc/assertions.h"
 #include "libvpsc/isnan.h"

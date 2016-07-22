@@ -65,7 +65,14 @@ void PolygonShape::initWithXMLProperties(Canvas *canvas,
         // Read the number of points.
         int totalPoints = strings.at(stringIndex++).toInt();
         
-        int geometry[2][totalPoints];
+//        int geometry[2][totalPoints];
+
+        int sizeX = 2;
+        int sizeY = totalPoints;
+        int **geometry = new int*[sizeY];
+        for(int i = 0; i < sizeY; ++i) {
+            geometry[i] = new int[sizeX];
+        }
 
         int xp = essentialProp<int>(node, x_xPos, ns);
         int yp = essentialProp<int>(node, x_yPos, ns);
@@ -77,6 +84,11 @@ void PolygonShape::initWithXMLProperties(Canvas *canvas,
             geometry[1][ptNum] = strings.at(stringIndex++).toInt() + yp;
         }
         setBoundaryInternal(geometry[0], geometry[1], totalPoints);
+
+        for(int i = 0; i < sizeY; ++i) {
+            delete [] geometry[i];
+        }
+        delete [] geometry;
     }
     else
     {

@@ -2,7 +2,7 @@
 TEMPLATE = lib
 TARGET = dunnartcanvas
 
-CONFIG += shared
+CONFIG += staticlib c++11
 
 DEPENDPATH +=  .. ../libogdf .
 INCLUDEPATH += .. ../libogdf .
@@ -26,6 +26,8 @@ win32 {
 LIBS += -Wl,--export-all-symbols -Wl,--no-whole-archive
 }
 LIBS += -L$$DESTDIR -lavoid -lvpsc -ltopology -lcola -logdf
+
+
 
 # Input
 RESOURCES += \
@@ -163,12 +165,3 @@ displaygithash {
   
   PRE_TARGETDEPS += githash.h
 }
-
-
-
-
-
-
-
-
-

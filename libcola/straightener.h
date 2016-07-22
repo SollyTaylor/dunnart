@@ -25,6 +25,7 @@
 #include <cfloat>
 #include <iostream>
 #include <iterator>
+#include <algorithm>
 
 #include "libvpsc/rectangle.h"
 #include "libcola/commondefs.h"

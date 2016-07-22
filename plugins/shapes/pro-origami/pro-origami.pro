@@ -10,3 +10,8 @@ include(../shape_plugin_options.pri)
 HEADERS       = strand.h helix.h
 SOURCES       = strand.cpp helix.cpp plugin.cpp
 
+win32: {
+CONFIG += windows
+LIBS += -L$$DESTDIR -ldunnartcanvas -ltopology -lcola -lvpsc -logdf -lavoid -lpsapi
+
+}

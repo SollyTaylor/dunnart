@@ -2,7 +2,7 @@
 TEMPLATE = lib
 TARGET = avoid
 
-CONFIG += shared
+CONFIG += staticlib
 
 INCLUDEPATH += ..
 DEPENDPATH += ..

@@ -22,7 +22,7 @@
 #define _GRADIENT_PROJECTION_H
 
 #include <iostream>
-#include <cmath>
+//#include <cmath>
 #include <valarray>
 
 #include "libvpsc/solve_VPSC.h"

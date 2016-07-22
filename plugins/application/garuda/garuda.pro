@@ -43,3 +43,9 @@ RESOURCE_FILES = \
 
 copyToDestDir($$RESOURCE_FILES)
 
+
+win32: {
+CONFIG += windows
+LIBS += -L$$DESTDIR -ldunnartcanvas -ltopology -lcola -lvpsc -logdf -lavoid -lpsapi
+
+}

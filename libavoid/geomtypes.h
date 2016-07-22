@@ -204,7 +204,7 @@ class ReferencingPolygon;
 //! @note The Rectangle class can be used as an easy way of constructing a
 //!       square or rectangular polygon.
 //!
-class AVOID_EXPORT Polygon : public PolygonInterface
+class Polygon : public PolygonInterface
 {
     public:
         //! @brief  Constructs an empty polygon (with zero points). 

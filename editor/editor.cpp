@@ -32,7 +32,11 @@
 #include <cctype>
 #include <cstring>
 
+#ifdef WIN32
+#include <stdint.h>
+#else
 #include <unistd.h>
+#endif
 
 #include "application.h"
 
@@ -59,7 +63,7 @@ using namespace dunnart;
 #include "getopt.h"
 
 
-static void usage(char *title, char *editor);
+static void usage(const std::string& title, const std::string& editor);
 
 
 
@@ -94,7 +98,7 @@ int main(int argc, char *argv[])
                 save_svg_and_exit = true;
                 break;
             case 'h':
-                usage("Dunnart 2", argv[0]);
+                usage("Dunnart 2", std::string(argv[0]));
                 exit(EXIT_SUCCESS);
             case 'v':
                 printf("%s\n\n", "Dunnart 2");
@@ -205,7 +209,7 @@ int main(int argc, char *argv[])
 }
 
 
-static void usage(char *title, char *editor)
+static void usage(const std::string& title, const std::string& editor)
 {
     printf("%s\n\n"
 "Usage: %s [options] file\n"
@@ -220,7 +224,7 @@ static void usage(char *title, char *editor)
 "   -z xing_penalty   Set the connector crossing penalty (0 to 500).\n"
 "   -w nudge_distance 'Nudge' connectors by this amount to separate then.\n"
 "                     Only valid in batch mode (-b), otherwise use CTRL-N.\n"
-"\n", title, editor);
+"\n", title.c_str(), editor.c_str());
       
 }
 

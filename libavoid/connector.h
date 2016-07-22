@@ -65,7 +65,7 @@ enum ConnType {
 //!         must visit.  They may optionally be given an arrival/departure
 //!         direction.
 //!
-class AVOID_EXPORT Checkpoint
+class Checkpoint
 {
     public:
         //! @brief  A point that a route must visit.

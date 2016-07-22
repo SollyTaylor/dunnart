@@ -2,7 +2,7 @@
 TEMPLATE = lib
 TARGET = ogdf
 
-CONFIG += shared warn_off
+CONFIG += staticlib warn_off
 
 INCLUDEPATH += .
 DEPENDPATH += .
@@ -10,10 +10,10 @@ DEPENDPATH += .
 include(../common_options.qmake)
 CONFIG -= qt
 
-QMAKE_CXXFLAGS_DEBUG += -Wall -W -Wno-unused-parameter
-QMAKE_CXXFLAGS_RELEASE += -Wall -W -Wno-unused-parameter
+#QMAKE_CXXFLAGS_DEBUG += -Wall -W -Wno-unused-parameter
+#QMAKE_CXXFLAGS_RELEASE += -Wall -W -Wno-unused-parameter
 
-win32 {
+win32: {
 LIBS += -Wl,--export-all-symbols -Wl,--no-whole-archive -lpsapi
 }
 

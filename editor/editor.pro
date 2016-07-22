@@ -45,14 +45,13 @@ LIBS += -L$$DESTDIR
 
 }
 
-LIBS += -ldunnartcanvas
-
 # The linker on OS X Tiger requires that we resupply these.
 LIBS += -ltopology -lcola -lvpsc -logdf -lavoid
 
 win32 {
 CONFIG += windows
 
+LIBS += -L$$DESTDIR -ldunnartcanvas -ltopology -lcola -lvpsc -logdf -lavoid -lpsapi
 #QMAKE_POST_LINK  = "copy_win32_deps.bat $$DESTDIR"
 
 QMAKE_CLEAN = dunnart-win.zip
@@ -105,3 +104,20 @@ HEADERS += \
 	getopt.h \
 	mainwindow.h \
     application.h
+
+
+
+
+#win32:CONFIG(release, debug|release): LIBS += -L$$PWD/../build/ -lavoid
+#else:win32:CONFIG(debug, debug|release): LIBS += -L$$PWD/../build/ -lavoidd
+
+#INCLUDEPATH += $$PWD/../build
+#DEPENDPATH += $$PWD/../build
+
+#win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/../build/libavoid.a
+#else:win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../build/libavoidd.a
+#else:win32:!win32-g++:CONFIG(release, debug|release): PRE_TARGETDEPS += $$PWD/../build/avoid.lib
+#else:win32:!win32-g++:CONFIG(debug, debug|release): PRE_TARGETDEPS += $$PWD/../build/avoidd.lib
+
+RESOURCES += \
+    libdunnartcanvas.qrc

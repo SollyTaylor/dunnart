@@ -2,7 +2,7 @@
 TEMPLATE = lib
 TARGET = topology
 
-CONFIG += shared
+CONFIG += staticlib
 
 
 INCLUDEPATH += .. .
@@ -13,6 +13,9 @@ CONFIG -= qt
 
 LIBS += -L$$DESTDIR -lvpsc -lcola -lavoid
 
+win32: {
+    DEFINES+=NOMINMAX
+}
 # Input
 SOURCES += \
 	topology_constraints_constructor.cpp \

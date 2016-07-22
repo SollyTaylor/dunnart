@@ -30,3 +30,9 @@ SOURCES       = pdepn.cpp \
     pdphenotypeprocessnode.cpp \
     pdlogicaloperators.cpp \
     pdprocessnode.cpp
+
+win32: {
+CONFIG += windows
+LIBS += -L$$DESTDIR -ldunnartcanvas -ltopology -lcola -lvpsc -logdf -lavoid -lpsapi
+
+}

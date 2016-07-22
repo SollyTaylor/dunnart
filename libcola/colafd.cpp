@@ -25,7 +25,7 @@
 #include <cstring>
 
 #include <vector>
-#include <cmath>
+//#include <cmath>
 #include <limits>
 
 #include "libvpsc/solve_VPSC.h"
